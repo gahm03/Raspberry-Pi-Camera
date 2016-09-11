@@ -1,0 +1,9 @@
+# Timelapse photography
+
+import picamera
+import time
+
+camera = picamera.PiCamera()
+for filename in camera.capture_continuous('img{counter}.jpg'):  # it can take two arguments: {counter} or {timestamp}
+  time.sleep(300)
+  
