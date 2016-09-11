@@ -1,0 +1,22 @@
+#  First example
+# Enable camera using sudo raspi-config
+# Install library for Camera
+#
+# sudo apt-get update
+# sudo apt-get install python3-picamera
+
+import picamera
+
+camera = picamera.PiCamera()
+# Take a picture
+camera.capture("pict.jpg")
+
+# Camera settings
+# camera.hflip = True
+# camera.vflip = True
+# camera.brightness = 50
+# camera.sharpness = 0
+
+# View video on RPI screen
+camera.start_preview()
+camera.stop_preview()
