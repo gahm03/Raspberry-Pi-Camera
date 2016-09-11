@@ -1,0 +1,6 @@
+# Sending an image on the network
+
+mysocket = socket.socket()
+mysocket.connect(('aserver', 8000)) # Port and server examples
+conn = mysocket.makefile('wb')      # File-type object to be sent, 'wb' permission for writing binary files
+camera.capture(conn, 'jpeg')        # conn is wirtten and send to the newtwork
