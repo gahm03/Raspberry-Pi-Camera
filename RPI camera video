@@ -1,0 +1,10 @@
+# Video Recording
+
+import picamera
+import time
+
+camera = picamera.PiCamera()
+
+camera.start_recording("vid.h264")
+time.sleep(10)     # Seconds
+camera.stop_recording()
